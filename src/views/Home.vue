@@ -251,16 +251,36 @@ export default {
     position: absolute;
     right: 60px;
     width: calc(100vw - 520px);
-    /* height: auto; */
     padding: 20px 20px 20px 0;
-    /* display: flex;
-    flex-wrap: wrap; */
     display: grid;
-    grid-template-rows:repeat(20, 360px);
+    grid-template-rows: repeat(20, 360px);
     grid-template-columns: repeat(4, 25%);
-      /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     grid-row-gap: 20px;
     grid-column-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    grid-template-columns: repeat(5, 19.67%) !important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .container {
+    grid-template-rows: repeat(27, 320px) !important;
+    grid-template-columns: repeat(3, 34.33%) !important;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .container {
+    grid-template-rows: repeat(40, 320px) !important;
+    grid-template-columns: repeat(2, 54.8%) !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-rows: repeat(80, 340px) !important;
+    grid-template-columns: repeat(1,calc(100% + 60px)) !important;
   }
 }
 </style>
