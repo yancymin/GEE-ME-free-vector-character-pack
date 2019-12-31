@@ -15,12 +15,17 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%;
-  min-width: 200px;
+   /* min-width: 200px;
   max-width: 300px; */
   height: 100%;
   background: #edf1f7;
   border-radius: 12px;
   /* padding: 10px; */
+
+  img {
+    /* width: 100%;
+    max-width: 53%; */
+    max-height: 80%;
+  }
 }
 </style>

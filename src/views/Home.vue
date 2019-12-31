@@ -262,6 +262,7 @@ export default {
 
 @media screen and (min-width: 1600px) {
   .container {
+      grid-template-rows: repeat(16, 360px) !important;
     grid-template-columns: repeat(5, 19.67%) !important;
   }
 }
