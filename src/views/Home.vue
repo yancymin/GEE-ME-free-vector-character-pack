@@ -336,4 +336,28 @@ export default {
     }
   }
 }
+.card {
+  opacity: 0;
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(-60deg) translateY(20px);
+  animation: cardShow 0.5s ease forwards;
+
+  @keyframes cardShow {
+    to {
+      opacity: 1;
+      transform: perspective(1000px) rotateY(0) translateY(0);
+    }
+  }
+  @for $i from 1 through 80 {
+    &:nth-of-type(#{$i}) {
+      $timing: $i * 0.07;
+      animation-delay: #{$timing}s;
+
+      ::v-deep img {
+        $timing: $i * 0.09;
+        animation-delay: #{$timing}s;
+      }
+    }
+  }
+}
 </style>

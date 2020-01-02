@@ -16,17 +16,22 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-   /* min-width: 200px;
+  /* min-width: 200px;
   max-width: 300px; */
   height: 100%;
   background: #edf1f7;
   border-radius: 12px;
-  /* padding: 10px; */
 
   img {
-    /* width: 100%;
-    max-width: 53%; */
     max-height: 90%;
+    opacity: 0;
+    animation: svgShow 0.4s ease forwards;
+
+    @keyframes svgShow {
+      to {
+        opacity: 1;
+      }
+    }
   }
 }
 </style>
