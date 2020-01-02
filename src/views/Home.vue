@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="container">
-      <Card v-for="n in 80" :key="n" />
+      <Card v-for="(c,index) in svgs" :svgSrc="svgs[index]" :key="index" />
     </div>
   </div>
 </template>
@@ -66,6 +66,18 @@ export default {
   name: 'home',
   components: {
     Card,
+  },
+  mounted() {
+    const svgLinks = [];
+    for (let i = 1; i <= 80; i += 1) {
+      svgLinks.push(`/people/0${i}.svg`);
+    }
+    this.svgs = svgLinks;
+  },
+  data() {
+    return {
+      svgs: this.svgLinks,
+    };
   },
 };
 </script>
@@ -109,7 +121,7 @@ export default {
       p {
         max-width: 360px;
         text-align: center;
-        @include font(14, 400, 19, 0);
+        @include font(16, 400, 21, 0);
       }
       a {
         display: flex;
@@ -260,7 +272,13 @@ export default {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1920px) {
+  .container {
+    grid-template-rows: repeat(14, 420px) !important;
+    grid-template-columns: repeat(6, 16.36%) !important;
+  }
+}
+@media screen and (max-width: 1600px) {
   .container {
     grid-template-rows: repeat(16, 360px) !important;
     grid-template-columns: repeat(5, 19.67%) !important;

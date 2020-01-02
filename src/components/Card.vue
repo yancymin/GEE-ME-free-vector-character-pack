@@ -1,12 +1,13 @@
 <template>
   <div class="card">
-    <img src="../assets/people/1.svg" alt srcset />
+    <img :src="svgSrc" alt srcset />
   </div>
 </template>
 
 <script>
 export default {
   name: 'card',
+  props: ['svgSrc'],
 };
 </script>
 
@@ -25,7 +26,7 @@ export default {
   img {
     /* width: 100%;
     max-width: 53%; */
-    max-height: 80%;
+    max-height: 90%;
   }
 }
 </style>
