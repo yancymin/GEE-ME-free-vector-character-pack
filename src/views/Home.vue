@@ -262,7 +262,7 @@ export default {
 
 @media screen and (min-width: 1600px) {
   .container {
-      grid-template-rows: repeat(16, 360px) !important;
+    grid-template-rows: repeat(16, 360px) !important;
     grid-template-columns: repeat(5, 19.67%) !important;
   }
 }
@@ -281,7 +281,41 @@ export default {
 @media screen and (max-width: 900px) {
   .container {
     grid-template-rows: repeat(80, 340px) !important;
-    grid-template-columns: repeat(1,calc(100% + 60px)) !important;
+    grid-template-columns: repeat(1, calc(100% + 60px)) !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .home {
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .side-panel {
+      position: relative;
+      margin: 0;
+      padding: 0 32px 32px 32px;
+      height: 100vh;
+
+      .side-panel_top {
+        margin: 0;
+        padding: 0px;
+
+        a {
+          &:nth-of-type(1) {
+            margin-top: 48px;
+          }
+        }
+      }
+    }
+
+    .container {
+      width: 100vw;
+      position: unset;
+      grid-template-rows: repeat(40, 220px) !important;
+      grid-template-columns: repeat(2, calc(50% - 10px)) !important;
+      padding: 20px;
+    }
   }
 }
 </style>
