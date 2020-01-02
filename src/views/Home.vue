@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="container">
-      <Card v-for="(c,index) in svgs" :svgSrc="svgs[index]" :key="index" />
+      <Card v-for="(c,index) in svgs" :svgSrc="svgs[index]" :pngSrc='pngs[index]' :key="index" />
     </div>
   </div>
 </template>
@@ -68,15 +68,29 @@ export default {
     Card,
   },
   mounted() {
+    // window.addEventListener('beforeunload', e => this.beforeunloadFn(e));
+
     const svgLinks = [];
+    const pngLinks = [];
     for (let i = 1; i <= 80; i += 1) {
-      svgLinks.push(`/people/0${i}.svg`);
+      svgLinks.push(`/people/svg/0${i}.svg`);
+      pngLinks.push(`/people/png/0${i}.png`);
     }
     this.svgs = svgLinks;
+    this.pngs = pngLinks;
   },
+  // methods: {
+  //   beforeunloadFn() {
+  //     window.scrollTo(0, 0, 'auto');
+  //   },
+  // },
+  // destroyed() {
+  //   window.removeEventListener('beforeunload', e => this.beforeunloadFn(e));
+  // },
   data() {
     return {
       svgs: this.svgLinks,
+      pngs: this.pngLinks,
     };
   },
 };
@@ -339,22 +353,22 @@ export default {
 .card {
   opacity: 0;
   backface-visibility: hidden;
-  transform: perspective(1000px) rotateY(-60deg) translateY(20px);
-  animation: cardShow 0.5s ease forwards;
+  /* transform: translateY(60px); */
+  animation: cardShow 0.35s ease forwards;
 
   @keyframes cardShow {
     to {
       opacity: 1;
-      transform: perspective(1000px) rotateY(0) translateY(0);
+      /* transform: translateY(0); */
     }
   }
   @for $i from 1 through 80 {
     &:nth-of-type(#{$i}) {
-      $timing: $i * 0.07;
+      $timing: $i * 0.06;
       animation-delay: #{$timing}s;
 
       ::v-deep img {
-        $timing: $i * 0.09;
+        $timing: $i * 0.07;
         animation-delay: #{$timing}s;
       }
     }
