@@ -52,7 +52,7 @@
         <span>Made with ❤️ in Wuhan</span>
         <span>
           Copyright © 2020
-          <a href="https://geetest.design" target="_blank">G-Design</a>
+          <a href="https://bookmark.geetest.design/" target="_blank">G-Design</a>
         </span>
       </div>
     </div>
@@ -235,8 +235,8 @@ export default {
 
       .social {
         display: flex;
-        align-items: center;
         margin-bottom: 40px;
+
         a {
           height: 40px;
           transition: all 0.25s ease;
@@ -297,22 +297,17 @@ export default {
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1950px) {
   .container {
-    grid-template-rows: repeat(17, 420px) !important;
+    grid-template-rows: repeat(17, 390px) !important;
     grid-template-columns: repeat(6, 16.36%) !important;
   }
 }
-@media screen and (max-width: 1600px) {
+
+@media screen and (max-width: 1450px) {
   .container {
-    grid-template-rows: repeat(20, 360px) !important;
-    grid-template-columns: repeat(5, 19.67%) !important;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .container {
-    grid-template-rows: repeat(34, 320px) !important;
-    grid-template-columns: repeat(3, 34.33%) !important;
+    grid-template-rows: repeat(25, 320px) !important;
+    grid-template-columns: repeat(4, 34.33%) !important;
   }
 }
 @media screen and (max-width: 1050px) {
