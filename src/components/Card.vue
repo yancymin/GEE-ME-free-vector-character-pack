@@ -31,7 +31,7 @@ export default {
   box-shadow: inset 0 0 0 4px transparent;
 
   img {
-    max-height: 90%;
+    max-height: 82%;
     opacity: 0;
     animation: svgShow 0.4s ease forwards;
 
@@ -86,8 +86,9 @@ export default {
           content: '';
           position: absolute;
           left: -1px;
+          top: 8px;
           display: block;
-          height: 55%;
+          height: 24px;
           width: 1px;
           background-color: rgb(92, 92, 92);
           transition: all 0.25s ease;

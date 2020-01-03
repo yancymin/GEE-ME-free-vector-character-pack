@@ -4,7 +4,7 @@
       <div class="side-panel_top">
         <img class="logo" src="../assets/logo.svg" alt srcset />
         <!--eslint-disable -->
-        <p>Character Kit is a completely free collection of coaxial cartoon characters with 80 levels of images and more than 400 head / wearing parts, which can be arbitrarily matched with the image you want. You can use it in any design or development project. The casual style is widely applicable.</p>
+        <p>GEE! ME is a great set of flat graphics required, 100 cartoon characters and over 400 coolest objects. You can use it in any design or development projects. It’s completely free and just enjoy it~</p>
         <!--eslint-enable -->
         <a download href>
           <img src="../assets/Sketch_Logo.svg" alt />
@@ -18,13 +18,13 @@
       <div class="side-panel_bottom">
         <span>Designers</span>
         <div class="links">
-          <a target="_blank" href>Yorkun</a>
+          <a target="_blank" href="https://yorkun.com">Yorkun</a>
           <span>/</span>
-          <a target="_blank" href>Hwoma</a>
+          <a target="_blank" href="https://www.hwoma.com/">Hwoma</a>
           <span>/</span>
-          <a target="_blank" href>Yancy Min</a>
+          <a target="_blank" href="https://yancymin.design">Yancy Min</a>
           <span>/</span>
-          <a target="_blank" href>Charlie Liu</a>
+          <a target="_blank" href="https://www.liuchangyi.com/">Charlie Liu</a>
         </div>
         <div class="social">
           <a
@@ -42,7 +42,7 @@
           <a href="https://dribbble.com/geetest" target="_blank">
             <img src="../assets/dribbble.svg" alt />
           </a>
-          <a href="https://dribbble.com/geetest" target="_blank">
+          <a href="https://github.com/yancymin/GEE-ME-free-vector-character-pack" target="_blank">
             <img src="../assets/github.svg" alt />
           </a>
         </div>
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="container">
-      <Card v-for="(c,index) in svgs" :svgSrc="svgs[index]" :pngSrc='pngs[index]' :key="index" />
+      <Card v-for="(c,index) in svgs" :svgSrc="svgs[index]" :pngSrc="pngs[index]" :key="index" />
     </div>
   </div>
 </template>
@@ -72,9 +72,17 @@ export default {
 
     const svgLinks = [];
     const pngLinks = [];
-    for (let i = 1; i <= 80; i += 1) {
-      svgLinks.push(`/people/svg/0${i}.svg`);
-      pngLinks.push(`/people/png/0${i}.png`);
+    for (let i = 1; i <= 100; i += 1) {
+      if (i < 10) {
+        svgLinks.push(`/people/svg/gee_me_00${i}.svg`);
+        pngLinks.push(`/people/png/gee_me_00${i}.png`);
+      } else if (i >= 10 && i < 100) {
+        svgLinks.push(`/people/svg/gee_me_0${i}.svg`);
+        pngLinks.push(`/people/png/gee_me_0${i}.png`);
+      } else {
+        svgLinks.push(`/people/svg/gee_me_${i}.svg`);
+        pngLinks.push(`/people/png/gee_me_${i}.png`);
+      }
     }
     this.svgs = svgLinks;
     this.pngs = pngLinks;
@@ -288,31 +296,31 @@ export default {
 
 @media screen and (min-width: 1920px) {
   .container {
-    grid-template-rows: repeat(14, 420px) !important;
+    grid-template-rows: repeat(17, 420px) !important;
     grid-template-columns: repeat(6, 16.36%) !important;
   }
 }
 @media screen and (max-width: 1600px) {
   .container {
-    grid-template-rows: repeat(16, 360px) !important;
+    grid-template-rows: repeat(20, 360px) !important;
     grid-template-columns: repeat(5, 19.67%) !important;
   }
 }
 @media screen and (max-width: 1400px) {
   .container {
-    grid-template-rows: repeat(27, 320px) !important;
+    grid-template-rows: repeat(34, 320px) !important;
     grid-template-columns: repeat(3, 34.33%) !important;
   }
 }
 @media screen and (max-width: 1050px) {
   .container {
-    grid-template-rows: repeat(40, 320px) !important;
+    grid-template-rows: repeat(50, 320px) !important;
     grid-template-columns: repeat(2, 54.8%) !important;
   }
 }
 @media screen and (max-width: 900px) {
   .container {
-    grid-template-rows: repeat(80, 340px) !important;
+    grid-template-rows: repeat(100, 340px) !important;
     grid-template-columns: repeat(1, calc(100% + 60px)) !important;
   }
 }
@@ -344,7 +352,7 @@ export default {
     .container {
       width: 100vw;
       position: unset;
-      grid-template-rows: repeat(40, 220px) !important;
+      grid-template-rows: repeat(50, 220px) !important;
       grid-template-columns: repeat(2, calc(50% - 10px)) !important;
       padding: 20px;
     }
@@ -362,7 +370,7 @@ export default {
       /* transform: translateY(0); */
     }
   }
-  @for $i from 1 through 80 {
+  @for $i from 1 through 100 {
     &:nth-of-type(#{$i}) {
       $timing: $i * 0.06;
       animation-delay: #{$timing}s;
