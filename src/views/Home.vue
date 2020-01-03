@@ -10,7 +10,10 @@
           <img src="../assets/Sketch_Logo.svg" alt />
           Sketch
         </a>
-        <a href target="_blank">
+        <a
+          href="https://www.figma.com/file/ReHss0R5s19m52es6hlFPH/GEE-ME-Vector-Character-Pack?node-id=0%3A1"
+          target="_blank"
+        >
           <img src="../assets/Figma_Logo.svg" alt />
           Figma
         </a>
