@@ -287,7 +287,7 @@ export default {
     width: calc(100vw - 520px);
     padding: 20px 20px 20px 0;
     display: grid;
-    grid-template-rows: repeat(20, 360px);
+    grid-template-rows: repeat(25, 360px);
     grid-template-columns: repeat(4, 25%);
     grid-row-gap: 20px;
     grid-column-gap: 20px;
