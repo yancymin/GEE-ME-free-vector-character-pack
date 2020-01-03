@@ -6,7 +6,7 @@
         <!--eslint-disable -->
         <p>GEE! ME is a great set of flat graphics required, 100 cartoon characters and over 400 coolest objects. You can use it in any design or development projects. It’s completely free and just enjoy it~</p>
         <!--eslint-enable -->
-        <a download href>
+        <a download href="/people/GEE-ME-Vector-Character-Pack.sketch">
           <img src="../assets/Sketch_Logo.svg" alt />
           Sketch
         </a>
