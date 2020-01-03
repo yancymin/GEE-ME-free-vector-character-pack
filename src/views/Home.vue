@@ -30,18 +30,20 @@
           <a target="_blank" href="https://www.liuchangyi.com/">Charlie Liu</a>
         </div>
         <div class="social">
+          <!--eslint-disable -->
           <a
-            href="https://www.producthunt.com/posts/ouch-illustrations?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ouch-illustrations"
+            href="https://www.producthunt.com/posts/gee-me?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gee-me"
             target="_blank"
           >
             <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=141557&theme=light"
-              alt="Ouch! Illustrations - Free illustrations for better UX | Product Hunt Embed"
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=179779&theme=light"
+              alt="GEE! ME - Free Vector Character Pack - 100 Characters Free Download | Product Hunt Embed"
               style="width: 250px; height: 54px;"
               width="250px"
               height="54px"
             />
           </a>
+          <!--eslint-enable -->
           <a href="https://dribbble.com/geetest" target="_blank">
             <img src="../assets/dribbble.svg" alt />
           </a>
