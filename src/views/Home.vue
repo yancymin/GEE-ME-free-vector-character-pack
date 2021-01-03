@@ -4,18 +4,22 @@
       <div class="side-panel_top">
         <img class="logo" src="../assets/logo.svg" alt srcset />
         <!--eslint-disable -->
-        <p>GEE! ME is a great set of flat graphics required, 100 cartoon characters and over 400 coolest objects. You can use it in any design or development projects. It’s completely free and just enjoy it~</p>
+        <p>
+          GEE! ME is a great set of flat graphics required, 100 cartoon characters and over 400
+          coolest objects. You can use it in any design or development projects. It’s completely
+          free and just enjoy it~
+        </p>
         <!--eslint-enable -->
-        <a download href="/people/GEE-ME-Vector-Character-Pack.sketch">
-          <img src="../assets/Sketch_Logo.svg" alt />
-          Sketch
-        </a>
         <a
-          href="https://www.figma.com/file/ReHss0R5s19m52es6hlFPH/GEE-ME-Vector-Character-Pack?node-id=0%3A1"
+          href="https://www.figma.com/community/file/874561187582459048/GEE!-ME-100-Characters-Pack"
           target="_blank"
         >
           <img src="../assets/Figma_Logo.svg" alt />
           Figma
+        </a>
+        <a download href="/people/GEE-ME-Vector-Character-Pack.sketch">
+          <img src="../assets/Sketch_Logo.svg" alt />
+          Sketch
         </a>
       </div>
       <div class="side-panel_bottom">
@@ -38,7 +42,7 @@
             <img
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=179779&theme=light"
               alt="GEE! ME - Free Vector Character Pack - 100 Characters Free Download | Product Hunt Embed"
-              style="width: 250px; height: 54px;"
+              style="width: 250px; height: 54px"
               width="250px"
               height="54px"
             />
@@ -53,13 +57,13 @@
         </div>
         <span>Made with ❤️ in Wuhan</span>
         <span>
-          Copyright © 2020
+          Copyright © 2021
           <a href="https://bookmark.geetest.design/" target="_blank">G-Design</a>
         </span>
       </div>
     </div>
     <div class="container">
-      <Card v-for="(c,index) in svgs" :svgSrc="svgs[index]" :pngSrc="pngs[index]" :key="index" />
+      <Card v-for="(c, index) in svgs" :svgSrc="svgs[index]" :pngSrc="pngs[index]" :key="index" />
     </div>
   </div>
 </template>
@@ -110,7 +114,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/global.scss';
+@import "../style/global.scss";
 
 .home {
   position: relative;
@@ -250,8 +254,7 @@ export default {
             }
 
             &:hover {
-              filter: invert(1) hue-rotate(96deg) grayscale(1) contrast(1)
-                brightness(2);
+              filter: invert(1) hue-rotate(96deg) grayscale(1) contrast(1) brightness(2);
             }
           }
 
